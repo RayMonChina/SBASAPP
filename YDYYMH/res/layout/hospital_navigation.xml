@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sy_bj"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/topbj" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/selector_bt_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/top_title"
+                style="@style/top_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="院内导航" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:background="@drawable/topbj"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/rl_bt_sh"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navigation_tab_left_down"
+            android:text="北院平面图"
+            android:textColor="#FFFFFF"
+            android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/rl_bt_yx"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/middlenoselect"
+            android:text="北院实体图"
+            android:textColor="#0079ff"
+            android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+            android:textSize="14sp" />
+        <Button
+            android:id="@+id/rl_bt_ssh"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navigation_tab_right_up"
+            android:text="南院平面图"
+            android:textColor="#0079ff"
+            android:paddingTop="8dp"
+			android:paddingBottom="8dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/hn_bj"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/hn_ll_all_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/hn_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="平面图"
+                    android:textSize="19sp" />
+
+                <Button
+                    android:id="@+id/hn_right_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/seletor_hn_rightchoose" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_marginTop="3dp"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/im_pic"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="matrix" />
+                </LinearLayout>
+
+                <!-- centerInside -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/hn_building"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/hn_finger" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="点击楼名显示楼层详细"
+                            android:textColor="#ff5b66"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
